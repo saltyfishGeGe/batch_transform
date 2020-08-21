@@ -119,30 +119,5 @@ public class HdfsHelper {
 
     public static void main(String[] args) {
         HdfsHelper hdfsHelper = new HdfsHelper();
-        hdfsHelper.init();
-        try {
-            String path ="/GAOTIE/IUPS_CHSR_XDR/OTHER/20200702/17";
-            Path hdfspath = new Path("hdfs://clusterb/tmp/ODM2/"+path);
-            LOG.info(">>>>>>>>>>>>>>>>>>>>>>>start scan hdfspath:"+hdfspath);
-            RemoteIterator<LocatedFileStatus> iterator = hdfsHelper.hdfsClient.listFiles(hdfspath, true);
-            while(iterator.hasNext()){
-                LocatedFileStatus lfs = iterator.next();
-                LOG.info("-----------file:"+lfs.getPath().getName());
-            }
-            LOG.info("<<<<<<<<<<<<<<< end scan hdfs file");
-            LOG.info("start write file>>>>>>>>>>>");
-            Path file = new Path(hdfspath + "/" + "TEST_CDR_20200729.dat");
-            FSDataOutputStream dos = hdfsHelper.hdfsClient.create(file);
-            Writer writer = new BufferedWriter(new OutputStreamWriter(dos));
-            writer.write("GCTest hdfs kerberos!");
-            LOG.info("write hdfs success,file:"+file);
-            writer.close();
-
-        } catch (Exception e) {
-            LOG.error("hdfs excute error,", e);
-        }
-
-        // 是否考虑来个补数的方法？
-        // 为了避免影响到当前任务正在处理的文件，考虑加个时间过滤？
     }
 }

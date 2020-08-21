@@ -396,56 +396,6 @@ public class StandardFtpHelper extends FtpHelper {
 //        return flag;  
 //    }  
 	public static void main(String[] args) {
-		System.out.println("测试ftpReader...");
-//		FtpHelper helper = new StandardFtpHelper("172.17.8.229", "storm", "Storm@chpw0325", 21, 36000, "PASV");
-		FtpHelper helper = new StandardFtpHelper("207.148.124.80", "chwech-ftp", "3401177k", 21, 36000, "PASV");
-		helper.loginFtpServer();
-		HashSet<String> files = helper.getListFiles("/chwech-ftp/yzb/source", 0, 100, Arrays.asList(".tmp"));
-//		HashSet<String> files = helper.getListFiles("/home/storm/terrace_root_test/", 0, 100, null);
-		System.out.println(files.size());
-		System.out.println(files);
-
-//		FileOutputStream fos = null;
-//		for(String file: files){
-//			try {
-//				File ff = new File("/app/bighead/CDR_Transform/data/bak/" + FilenameUtils.getName(file));
-//
-//				if(!ff.exists()){
-//					ff.getParentFile().mkdirs();
-//					ff.createNewFile();
-//				}
-//
-//				System.out.println("开始下载文件：" + file);
-//				LocalDateTime start = LocalDateTime.now();
-//				helper.getFtpClient().setFileType(FTP.BINARY_FILE_TYPE);//设置为二进制传输
-//				fos = new FileOutputStream(ff);
-//
-//				helper.getFtpClient().enterLocalPassiveMode();
-//				helper.getFtpClient().retrieveFile(file, fos);
-//
-//				fos.flush();
-//				LocalDateTime end = LocalDateTime.now();
-//				System.out.println(Duration.between(start, end).toMillis());
-//			} catch (FileNotFoundException e) {
-////				e.printStackTrace();
-//				System.out.println(e);
-//			} catch (Exception e) {
-////				e.printStackTrace();
-//				System.out.println(e);
-//			} finally {
-//				if(fos != null){
-//					try {
-//						fos.close();
-//					} catch (IOException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//		}
-
-		helper.logoutFtpServer();
-
-		System.out.printf("测试完成");
 
 	}
 }
