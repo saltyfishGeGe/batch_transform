@@ -1,1 +1,0 @@
-11:57:59.492 [main] ERROR c.nokia.ftpreader.StandardFtpHelper:256- FTP服务:[207.148.124.80], 获取path：[/chwech-ftp/yzb/source] 下文件列表时发生I/O异常,请确认与ftp服务器的连接正常

@@ -1,4 +1,0 @@
-2020-08-05 11:51:51.425 [main] INFO  StandardFtpHelper - FTP207.148.124.80,登录成功
-2020-08-05 11:52:47.712 [main] INFO  StandardFtpHelper - FTP: 207.148.124.80, 当前读取的FTP扫描列表：文件总数：0， 文件总大小为：0
-2020-08-05 11:52:47.846 [main] INFO  StandardFtpHelper - 207.148.124.80 FTP连接退出登录成功..
-2020-08-05 11:52:47.846 [main] INFO  StandardFtpHelper - FTP服务器207.148.124.80断开连接成功..
