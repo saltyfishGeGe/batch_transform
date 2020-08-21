@@ -2,13 +2,13 @@ package com.nokia.common;
 
 public class FtpParameter {
 
-//    public static final String username = "storm";
+//    public static final String username = "xxxx";
 //
-//    public static final String password = "Storm@chpw0325";
+//    public static final String password = "xxx";
 
-    public static final String username = "nokia_ftp";
+    public static final String username = "xxxxp";
 
-    public static final String password = "ESB_nokiaftp#81";
+    public static final String password = "xxxx";
 
     public static final int port = 21;
 
